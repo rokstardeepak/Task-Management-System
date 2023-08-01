@@ -1,24 +1,45 @@
-# TMS - Frontend
+# Introduction
+Task management system is a demonstration web application developed for team project works where users can manage various tasks within a team easily.
+Developed on Spring Boot(backend) with Angular v7 (front-end) frameworks and MySql database.
+Project is focused primarily on handling document-based projects.
+“User” can be a member of more than Programs. And one program can have any number of User members associated with it.
+This web application is made secure and robust. I have implemented JWT-based Authentication on every APIs.
+The project is in an early stage of development and needs lots of work and bug fixing to make it usable in real life. Still, learners can use this as template and make it functinal application.
+I would be happy to see people contribute and enhance this project.
 
-## **[Frontend Documentation](https://ayushman1024.github.io/documentation/)**
-This project was generated with version 7.3.0.
+# TODO:
+Lots of UI/UX improvements.
+New features like Program settings, custom project themes, use settings, and edit details.
+UI improvements like pagination on task lists and user picker list.
 
-## Code scaffolding
+# Dependencies
+Java 8 JDK
+Embedded Tomcat 9 server
+MySQL Database
+Node Package Manager NPM
+Maven
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Installation
+# Backend
+In Eclipse or similar IDE import the "backend" from this repo with option "import existing maven project".
+Build the maven project to install all the required dependencies.
+To setup database, install MySQL. Make any database.
+Then update below three configuration fields in file application.properties inside /resources folder
+spring.datasource.url=jdbc:mysql://localhost:3306/tms
+spring.datasource.username=root
+spring.datasource.password=root
+For email services you need to use email via SMTP. For that you need to update application.properties below fields.
+spring.mail.host=smtp.gmail.com
+spring.mail.smtp.ssl.trust=smtp.gmail.com
+spring.mail.port=587
+spring.mail.transport.protocol=smtp
+spring.mail.username=your.email@gmail.com
+spring.mail.password=password`
+Read Google SMTP common issues
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run the project from BackendApplication.java, all the tables will be initialised in database with its first run.
+Now execute roles.sql on your database.
+# Frontend
+You should have node.js installed on your system.
+GOTO the path of frontend folder in comand-prompt and run npm start instead of ng serve because i have configured different port number for frontend.
+Now your frontend will be hosted on http://localhost:8001 ,open this link in browser.(only for DEV)
